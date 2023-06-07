@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tail -f /dev/null
+named -f -L /var/log/named/query.log
 
 #named -g
 

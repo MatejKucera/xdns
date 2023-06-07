@@ -22,15 +22,6 @@ logging {
         severity info;
     };
 
-    channel default_log {
-        file "/var/log/named/default.log";
-        print-time yes;
-        print-category yes;
-        print-severity yes;
-        severity info;
-    };
-
     category queries { query_log; };
-    category default { default_log; };
 };
 
