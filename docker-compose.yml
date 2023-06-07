@@ -12,4 +12,5 @@ services:
     #  - ./conf/db.redirect:/etc/bind/db.redirect
     #  - ./query.log:/var/bind/query.log
     ports:
+      - 53:53
       - 53:53/udp
