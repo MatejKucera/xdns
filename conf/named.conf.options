@@ -16,7 +16,11 @@ options {
 logging {
     channel querylog {
         file "/var/log/named/query.log" versions 3 size 10m;
-        severity debug 3;
         print-time yes;
+        print-category yes;
+        print-severity yes;
+        severity debug;
     };
+
+    category queries { querylog; };
 };
