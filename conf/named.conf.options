@@ -11,16 +11,17 @@ options {
     allow-recursion { any; };
 
     querylog yes;
-};
 
-logging {
-    channel querylog {
-        file "/var/log/named/query.log" versions 3 size 10m;
-        print-time yes;
-        print-category yes;
-        print-severity yes;
-        severity debug 3;
+    logging {
+        channel querylog {
+            file "/var/log/named/query.log" versions 3 size 10m;
+            print-time yes;
+            print-category yes;
+            print-severity yes;
+            severity debug 3;
+        };
+
+        category queries { querylog; };
     };
-
-    category queries { querylog; };
 };
+
