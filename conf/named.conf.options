@@ -9,6 +9,8 @@ options {
     recursion yes;
     allow-query { any; };
     allow-recursion { any; };
+
+    querylog yes;
 };
 
 logging {
