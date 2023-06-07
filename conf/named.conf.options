@@ -14,10 +14,9 @@ options {
 };
 
 logging {
-    channel query_log {
+    channel querylog {
         file "/var/log/named/query.log" versions 3 size 10m;
-        severity dynamic;
+        severity debug 3;
         print-time yes;
     };
-    category queries { query_log; };
 };
