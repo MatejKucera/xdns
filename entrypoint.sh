@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#tail -f /dev/null
+tail -f /dev/null
 
-named -g
+#named -g
 
 #named
