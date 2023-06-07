@@ -10,7 +10,7 @@ services:
       - ./conf/named.conf.options:/etc/bind/named.conf.options
     #  - ./conf/named.conf.default-zones:/etc/bind/named.conf.default-zones
     #  - ./conf/db.redirect:/etc/bind/db.redirect
-      - $QUERY_LOG:/var/log/named/query.log
+      - $QUERY_LOG:/var/log/named
     ports:
       - 53:53
       - 53:53/udp
