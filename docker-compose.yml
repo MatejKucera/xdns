@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  dns-redirect-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    #  - ./conf/named:/etc/default/named
+      - ./conf/named.conf.options:/etc/bind/named.conf.options
+    #  - ./conf/named.conf.default-zones:/etc/bind/named.conf.default-zones
+    #  - ./conf/db.redirect:/etc/bind/db.redirect
+    #  - ./query.log:/var/bind/query.log
+    ports:
+      - 53:53/udp

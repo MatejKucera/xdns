@@ -1,0 +1,17 @@
+options {
+        directory "/var/cache/bind";
+
+        dnssec-validation auto;
+
+        recursion yes;                 # enables recursive queries
+        allow-recursion { any; };  # allows recursive queries from "trusted" clients
+        listen-on { 0.0.0.1; };   # ns1 private IP address - listen on private network only
+        allow-transfer { none; };      # disable zone transfers by default
+
+        forwarders {
+                8.8.8.8;
+                8.8.4.4;
+        };
+
+        listen-on-v6 { any; };
+};
