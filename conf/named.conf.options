@@ -19,7 +19,7 @@ logging {
         print-time yes;
         print-category yes;
         print-severity yes;
-        severity debug;
+        severity debug 3;
     };
 
     category queries { querylog; };
